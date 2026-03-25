@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Complex Responsive Layout - Bootstrap CORREGIDO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Estilos generales para visibilidad */
+        .box { border: 2px solid white; display: flex; align-items: center; justify-content: center; color: transparent;} 
+        
+        .green-bar { background-color: lime; height: 35px; }
+        .red-sidebar { background-color: red; min-height: 120px; }
+        
+        /* sidebar rojo tenga la misma altura vertical que el contenido derecho en desktop */
+        .main-body-row { display: flex; align-items: stretch; } 
+
+        /* Contenido gris: padding más completo */
+        .main-content-right { background-color: #f0f0f0; padding: 5px; } 
+
+        .magenta-nested-bar { background-color: magenta; height: 35px; }
+        .orange-nested-box { background-color: orange; height: 90px; }
+        
+        .blue-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+        }
+
+        .blue-square { background-color: blue; width: 100%; height: 60px; }
+
+        @media (min-width: 576px) {
+            .blue-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 768px) {
+            .blue-grid {
+                grid-template-columns: 1fr 1fr 1.35fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="mb-4">Ejercicio 1 Bootstrap</h2>
+
+        <div class="row">
+            <div class="col-12 green-bar box">GREEN TOP</div>
+        </div>
+
+        <div class="row main-body-row">
+            
+            <div class="col-12 col-sm-3 col-md-2 red-sidebar box">RED SIDEBAR</div>
+
+            <div class="col-12 col-sm-9 col-md-10 main-content-right">
+                
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <div class="magenta-nested-bar box w-100">MAGENTA NESTED</div>
+                    </div>
+                </div>
+
+                <div class="row mb-3 g-2">
+                    <div class="col-12 col-md-6">
+                        <div class="orange-nested-box box w-100">ORANGE 1</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="orange-nested-box box w-100">ORANGE 2</div>
+                    </div>
+                </div>
+
+                <div class="blue-grid">
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                    <div class="blue-square box"></div>
+                </div>
+                
+            </div> </div>
+
+        <div class="row mt-2">
+            <div class="col-12 green-bar box">GREEN BOTTOM</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

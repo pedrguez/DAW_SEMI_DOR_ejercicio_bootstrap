@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .exercise-layout {
+            border: 2px solid #333;
+            background-color: white;
+            padding: 6px;
+        }
+
+        .box {
+            border: 3px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .bg-a { background-color: #ffe000; }
+        .bg-b { background-color: #5ab1de; }
+        .bg-c { background-color: #de1f9b; }
+        .bg-d { background-color: #f7a63b; }
+        .bg-e { background-color: #eb4f4f; }
+        .bg-f { background-color: #3fe09b; }
+        .bg-g { background-color: #8ce03f; }
+        .bg-h { background-color: #df80f0; }
+
+        @media (min-width: 768px) {
+            .bg-a { height: 120px; }
+            .bg-b,
+            .bg-c,
+            .bg-d,
+            .bg-e,
+            .bg-f,
+            .bg-g { height: 150px; }
+            .bg-h { height: 308px; }
+        }
+
+        @media (max-width: 767px) {
+            .bg-a { height: 95px; }
+            .bg-b,
+            .bg-c,
+            .bg-d,
+            .bg-e,
+            .bg-f,
+            .bg-g { height: 100px; }
+            .bg-h { height: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="mb-4">Ejercicio 4 Bootstrap</h2>
+
+        <div class="exercise-layout">
+            <div class="row g-2 mb-2">
+                <div class="col-12">
+                    <div class="box bg-a">A</div>
+                </div>
+            </div>
+
+            <div class="row g-2 align-items-stretch">
+                <div class="col-12 col-md-8">
+                    <div class="row g-2">
+                        <div class="col-4"><div class="box bg-b">B</div></div>
+                        <div class="col-4"><div class="box bg-c">C</div></div>
+                        <div class="col-4"><div class="box bg-d">D</div></div>
+                        <div class="col-4"><div class="box bg-e">E</div></div>
+                        <div class="col-4"><div class="box bg-f">F</div></div>
+                        <div class="col-4"><div class="box bg-g">G</div></div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="box bg-h">H</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
